@@ -3,9 +3,11 @@ angular.module('starter.controllers', [])
 .controller('EjemploCtrl',function($scope, $rootScope,ws)
 {
 
-   //$scope.estados=[];
-   ws.getEstados().then(function(estados){
-     console.log(estados);
+
+   ws.getEstados().then(function(arrEstados){
+     console.log(arrEstados);
+     $scope.estados=arrEstados;
+     $scope.estadoSelect=$scope.estados[1];
    },function(razon){
      console.error(razon);
    });
