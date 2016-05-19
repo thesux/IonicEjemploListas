@@ -40,8 +40,19 @@
             </div>
             <select
             ng-model="estadoSelect"
-            ng-options="estado.nombre for estado in estados track by estado.idestado">
+            ng-options="estado.nombre for estado in estados track by estado.idestado"
+            ng-change="onChange(estadoSelect.idestado)">
               <option value="{{estado.idestado}}">{{estado.nombre}}</option>
+            </select>
+          </label>
+          <label class="item item-input item-select">
+            <div class="input-label">
+              Municipio
+            </div>
+            <select
+            ng-model="municipioSelect"
+            ng-options="municipio.nombre for municipio in municipios track by municipio.idmunicipio">
+              <option value="{{municipio.idmunicipio}}">{{municipio.nombre}}</option>
             </select>
           </label>
         </div>
@@ -52,14 +63,7 @@
 
 
 
-        <label class="item item-input item-select">
-          <div class="input-label">
-            Municipio
-          </div>
-          <select>
-            <option>asd</option>
-          </select>
-        </label>
+
       </ion-content>
     </ion-pane>
   </body>
