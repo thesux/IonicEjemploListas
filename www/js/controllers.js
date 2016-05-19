@@ -4,10 +4,10 @@ angular.module('starter.controllers', [])
 {
 
 
-   ws.getEstados().then(function(arrEstados){
-     console.log(arrEstados);
+   ws.getEstados().then(function(arrEstados)
+   {
      $scope.estados=arrEstados;
-     $scope.estadoSelect=$scope.estados[1];
+     $scope.estadoSelect=$scope.estados[0];
    },function(razon){
      console.error(razon);
    });
